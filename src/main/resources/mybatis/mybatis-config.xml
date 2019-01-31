@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 引入外部资源文件 resource:默认引入classpath路径下的资源文件 -->
+    <!--<properties resource="jdbc.properties"></properties>-->
+    <settings>
+        <!-- 设置驼峰参数 -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
+    <!-- 配置别名 -->
+    <!--<typeAliases>
+        &lt;!&ndash; 配置包扫描：解决多个pojo别名问题，默认将类名作为笔名，大小写不敏感 &ndash;&gt;
+        <package name="cn.codingjc.po"/>
+    </typeAliases>-->
+
+
+    <!--&lt;!&ndash; 配置环境：可以配置多个环境，default：配置某一个环境的唯一标识，表示默认使用哪个环境 &ndash;&gt;
+    <environments default="development">
+        &lt;!&ndash; 配置环境,id:环境的唯一标识 &ndash;&gt;
+        <environment id="development">
+            &lt;!&ndash; 事务管理器，type:使用jdbc的事务管理器 &ndash;&gt;
+            <transactionManager type="JDBC"/>
+            &lt;!&ndash; 数据源，type:池类型的数据源 &ndash;&gt;
+            <dataSource type="POOLED">
+                &lt;!&ndash; 配置连接信息 &ndash;&gt;
+                <property name="driver" value="${jdbc.driverClass}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    &lt;!&ndash; 配置映射文件：用来配置sql语句和结果集类型等 &ndash;&gt;
+    <mappers>
+        <mapper resource="mybatis/mappers/UserMapper.xml"/>
+    </mappers>-->
+</configuration>
